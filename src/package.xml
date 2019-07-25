@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>RMA_Tiles_Menu_Controller</members>
+        <members>RMA_Tiles_Menu_Controller_Test</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>RMA_Tiles_Event</members>
+        <members>RMA_Tiles_Menu_Component</members>
+        <members>RMA_Tiles_Sub_Component</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>Tile_Metadata.Tile_3</members>
+        <members>Tile_Metadata.Tile_2</members>
+		<members>Tile_Metadata.Tile1</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>Tile_Metadata__mdt</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Tile_Metadata__mdt-Tile Menu Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>45.0</version>
+</Package>

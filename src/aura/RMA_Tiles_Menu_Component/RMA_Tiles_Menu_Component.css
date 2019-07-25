@@ -1,0 +1,15 @@
+.THIS a{
+    background-color: #f4f6f9;
+    border:none;
+}
+.THIS .tile{
+    margin: 0.5rem;
+    width: 30%;
+    height: 12.5rem;
+    margin-left: 2%;
+    position: relative;
+    background-color: #f4f6f9;
+}
+.THIS img{
+    width: 20%;
+}

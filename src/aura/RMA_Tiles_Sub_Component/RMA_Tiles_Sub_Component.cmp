@@ -1,0 +1,132 @@
+<aura:component access="global">
+    <aura:attribute name="Columns" type="String" default="3"/>
+    <aura:attribute name="record" type="String" />
+    <!--Register the component level event-->
+    <aura:registerEvent name="selectedRecordEvent" type="c:RMA_Tiles_Event"/>
+    <aura:if isTrue="{! equals(v.Columns,'6')}">
+        <div class="slds-box slds-m-around--small slds-small-order slds-medium-order slds-large-order slds-size--1-of-3 slds-medium-size--1-of-3 slds-large-size--1-of-6" style="{! if(v.record.Background_Image__c,'background-image: url('+ v.record.Background_Image__c +');','background-color: #f4f6f9;')}">
+            <a class="tile js-workspace-builder slds-text-link--reset slds-m-bottom--small slds-text-align--center slds-box--border js-workspace-tile " href="{!v.record.Link__c}" >
+                <div class="slds-m-top--large" >
+                    <aura:if isTrue="{! equals(v.record.Type__c,'Count')}">
+                        <strong class="slds-text-heading--small slds-m-top--small js-tile-label" style="{! v.record.Style_For_Count__c}">{! v.record.Queary__c}</strong>
+                        <aura:set attribute="else">
+                            <!--<lightning:icon iconName="utility:builder" alternativeText="Builder" />-->
+                            <img src="{! v.record.Image__c}"/>
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <div class="slds-text-heading--small slds-m-top--small js-tile-label" >
+                    <strong style="{! v.record.Style_For_Label__c}">{! v.record.Label}</strong>
+                </div>
+                <div class="slds-text-body--regular slds-text-color--weak slds-m-top--small slds-m-horizontal--small js-tile-description" >
+                    <span style="{! v.record.Style_For_Description__c}">{!v.record.Description__c}</span>
+                </div>
+            </a>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{! equals(v.Columns,'5')}">
+        <div class="slds-box slds-m-around--small slds-small-order slds-medium-order slds-large-order slds-size--1-of-3 slds-medium-size--1-of-3 slds-large-size--1-of-5" style="{! if(v.record.Background_Image__c,'background-image: url('+ v.record.Background_Image__c +');','background-color: #f4f6f9;')}">
+            <a class="tile js-workspace-builder slds-text-link--reset slds-m-bottom--small slds-text-align--center slds-box--border js-workspace-tile " href="{!v.record.Link__c}" >
+                <div class="slds-m-top--large" >
+                    <aura:if isTrue="{! equals(v.record.Type__c,'Count')}">
+                        <strong class="slds-text-heading--small slds-m-top--small js-tile-label" style="{! v.record.Style_For_Count__c}">{! v.record.Queary__c}</strong>
+                        <aura:set attribute="else">
+                            <!--<lightning:icon iconName="utility:builder" alternativeText="Builder" />-->
+                            <img src="{! v.record.Image__c}"/>
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <div class="slds-text-heading--small slds-m-top--small js-tile-label" >
+                    <strong style="{! v.record.Style_For_Label__c}">{! v.record.Label}</strong>
+                </div>
+                <div class="slds-text-body--regular slds-text-color--weak slds-m-top--small slds-m-horizontal--small js-tile-description" >
+                    <span style="{! v.record.Style_For_Description__c}">{!v.record.Description__c}</span>
+                </div>
+            </a>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{! equals(v.Columns,'4')}">
+        <div class="slds-box slds-m-around--small slds-small-order slds-medium-order slds-large-order slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-4" style="{! if(v.record.Background_Image__c,'background-image: url('+ v.record.Background_Image__c +');','background-color: #f4f6f9;')}">
+            <a class="tile js-workspace-builder slds-text-link--reset slds-m-bottom--small slds-text-align--center slds-box--border js-workspace-tile " href="{!v.record.Link__c}" >
+                <div class="slds-m-top--large" >
+                    <aura:if isTrue="{! equals(v.record.Type__c,'Count')}">
+                        <strong class="slds-text-heading--small slds-m-top--small js-tile-label" style="{! v.record.Style_For_Count__c}">{! v.record.Queary__c}</strong>
+                        <aura:set attribute="else">
+                            <!--<lightning:icon iconName="utility:builder" alternativeText="Builder" />-->
+                            <img src="{! v.record.Image__c}"/>
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <div class="slds-text-heading--small slds-m-top--small js-tile-label" >
+                    <strong style="{! v.record.Style_For_Label__c}">{! v.record.Label}</strong>
+                </div>
+                <div class="slds-text-body--regular slds-text-color--weak slds-m-top--small slds-m-horizontal--small js-tile-description" >
+                    <span style="{! v.record.Style_For_Description__c}">{!v.record.Description__c}</span>
+                </div>
+            </a>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{! equals(v.Columns,'3')}">
+        <div class="slds-box slds-m-around--small slds-small-order slds-medium-order slds-large-order slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-3" style="{! if(v.record.Background_Image__c,'background-image: url('+ v.record.Background_Image__c +');','background-color: #f4f6f9;')}">
+            <a class="tile js-workspace-builder slds-text-link--reset slds-m-bottom--small slds-text-align--center slds-box--border js-workspace-tile " href="{!v.record.Link__c}" >
+                <div class="slds-m-top--large" >
+                    <aura:if isTrue="{! equals(v.record.Type__c,'Count')}">
+                        <strong class="slds-text-heading--small slds-m-top--small js-tile-label" style="{! v.record.Style_For_Count__c}">{! v.record.Queary__c}</strong>
+                        <aura:set attribute="else">
+                            <!--<lightning:icon iconName="utility:builder" alternativeText="Builder" />-->
+                            <img src="{! v.record.Image__c}"/>
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <div class="slds-text-heading--small slds-m-top--small js-tile-label" >
+                    <strong style="{! v.record.Style_For_Label__c}">{! v.record.Label}</strong>
+                </div>
+                <div class="slds-text-body--regular slds-text-color--weak slds-m-top--small slds-m-horizontal--small js-tile-description" >
+                    <span style="{! v.record.Style_For_Description__c}">{!v.record.Description__c}</span>
+                </div>
+            </a>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{! equals(v.Columns,'2')}">
+        <div class="slds-box slds-m-around--small slds-small-order slds-medium-order slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2" style="{! if(v.record.Background_Image__c,'background-image: url('+ v.record.Background_Image__c +');','background-color: #f4f6f9;')}">
+            <a class="tile js-workspace-builder slds-text-link--reset slds-m-bottom--small slds-text-align--center slds-box--border js-workspace-tile " href="{!v.record.Link__c}" >
+                <div class="slds-m-top--large" >
+                    <aura:if isTrue="{! equals(v.record.Type__c,'Count')}">
+                        <strong class="slds-text-heading--small slds-m-top--small js-tile-label" style="{! v.record.Style_For_Count__c}">{! v.record.Queary__c}</strong>
+                        <aura:set attribute="else">
+                            <!--<lightning:icon iconName="utility:builder" alternativeText="Builder" />-->
+                            <img src="{! v.record.Image__c}"/>
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <div class="slds-text-heading--small slds-m-top--small js-tile-label" >
+                    <strong style="{! v.record.Style_For_Label__c}">{! v.record.Label}</strong>
+                </div>
+                <div class="slds-text-body--regular slds-text-color--weak slds-m-top--small slds-m-horizontal--small js-tile-description" >
+                    <span style="{! v.record.Style_For_Description__c}">{!v.record.Description__c}</span>
+                </div>
+            </a>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{! equals(v.Columns,'1')}">
+        <div class="slds-box slds-m-around--small slds-small-order slds-medium-order slds-large-order slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1" style="{! if(v.record.Background_Image__c != null,'background-image: url('+ v.record.Background_Image__c +');','background-color: #f4f6f9;')}">
+            <a class="tile js-workspace-builder slds-text-link--reset slds-m-bottom--small slds-text-align--center slds-box--border js-workspace-tile " href="{!v.record.Link__c}" >
+                <div class="slds-m-top--large" >
+                    <aura:if isTrue="{! equals(v.record.Type__c,'Count')}">
+                        <strong class="slds-text-heading--small slds-m-top--small js-tile-label" style="{! v.record.Style_For_Count__c}">{! v.record.Queary__c}</strong>
+                        <aura:set attribute="else">
+                            <!--<lightning:icon iconName="utility:builder" alternativeText="Builder" />-->
+                            <img src="{! v.record.Image__c}"/>
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <div class="slds-text-heading--small slds-m-top--small js-tile-label" >
+                    <strong style="{! v.record.Style_For_Label__c}">{! v.record.Label}</strong>
+                </div>
+                <div class="slds-text-body--regular slds-text-color--weak slds-m-top--small slds-m-horizontal--small js-tile-description" >
+                    <span style="{! v.record.Style_For_Description__c}">{!v.record.Description__c}</span>
+                </div>
+            </a>
+        </div>
+    </aura:if>
+</aura:component>

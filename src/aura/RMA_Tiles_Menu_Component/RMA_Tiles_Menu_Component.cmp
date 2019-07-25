@@ -1,0 +1,48 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,forceCommunity:availableForAllPageTypes,forceCommunity:layout" access="global" controller="RMA_Tiles_Menu_Controller">
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:handler name="selectedRecordEvent" event="c:RMA_Tiles_Event" action="{!c.handleComponentEvent}"/>
+    <aura:attribute name="Columns" type="String" default="3"/>
+    <aura:attribute name="Type" type="String" />
+    <aura:attribute name="listOfTiles" type="List"/>
+    <div class="slds-m-right--medium slds-m-top--medium slds-card" >
+        <h2 class="slds-m-left--medium slds-text-heading--small heading" >My Workspaces</h2>
+        <!--unrender facet: 86:0-->
+        <div class="componentContainor slds-m-top--x-small slds-grid slds-wrap slds-grid--vertical-stretch slds-size--1-of-1 slds-medium-size--6-of-6 slds-large-size--12-of-12" >
+            
+            <aura:iteration items="{!v.listOfTiles}" var="singleList">
+                <c:RMA_Tiles_Sub_Component record="{!singleList}" Columns = "{!v.Columns}"/>
+            </aura:iteration>
+        </div>
+    </div>
+    <aura:html tag="Style">
+        .componentContainor{
+        padding: 0.5rem;
+        }
+        .heading{
+        padding-top: 1rem;
+        }
+        .slds-box {
+        padding: none; 
+        border-radius: .25rem;
+        border: none;
+        }
+        .slds-large-size--1-of-6 {
+        width: 13.666667%;
+        }
+        .slds-large-size--1-of-5 {
+        width: 17.333333%;
+        }
+        .slds-large-size--1-of-4 {
+        width: 22.333333%;
+        }
+        .slds-large-size--1-of-3 {
+        width: 31.333333%;
+        }
+        .slds-large-size--1-of-2 {
+        width: 46.333333%;
+        }
+        .slds-large-size--1-of-1 {
+        width: 48.333333%;
+        }
+    </aura:html>
+</aura:component>
